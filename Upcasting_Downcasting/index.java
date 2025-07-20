@@ -12,8 +12,8 @@ class B extends A{
 public class index {
     public static void main(String[] args) {
         // double d = 4.5;
+        
         // int i = (int) d;
-
         // System.out.println(i);
 
         // Now here you cannot call a method of B from the class A object, because it's an object of class 
