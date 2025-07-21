@@ -30,8 +30,8 @@ public class index {
         // But you still can't call the method of B, reason - Even though the object is a B, the refernece is of type A. And java only allows you to call methods available in the reference type
         // you can only use what the reference type Knows and A doesn't know what Show1() is...
 
-        A obj = new B();
-        obj.show();
+        // A obj = new B();
+        // obj.show();
 
 
         // To solve the method problem we can use - Downcasting
@@ -39,10 +39,27 @@ public class index {
         // It's done explicitly using a cast operator and is used when you need to access subclass-specific methods or fields
         // has for this one - You can only call B's Methods after telling java
         // converting the A reference (obj) back to B. Now obj1 can see everything in class B
-        B obj1 = (B) obj;
-        obj1.show();
-        obj1.Show1();
+        // B obj1 = (B) obj;
+        // obj1.show();
+        // obj1.Show1();
 
+
+
+// Wraapper class - means converting primitive types (int, float, double) into objects(intger, character, double)
+// int - Integer
+// char - Character
+// double - Double
+
+        int num = 7;
+        Integer num1 = 8;
+        Integer num2 = num;  // Auto-boxing -> it's the automatic conversion of a primitive data type into its corresponding wrapper class object
+
+        Integer num3 = num2; // auto-unboxing -> it's the reverse, converting a wrapper class object  back to its primitive type
+
+        String str = "12";
+        int num4 = Integer.parseInt(str);
+
+        System.out.println(num1);
 
 
     }
