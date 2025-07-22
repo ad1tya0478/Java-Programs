@@ -1,11 +1,53 @@
-class A{
+// class A{
+//     public void show(){
+//         System.out.println("In A Show");
+//     }
+// }
+// class B extends A{
+//     public void Show1(){
+//         System.out.println("In B show");
+//     }
+// // }
+
+// abstract class Car {
+//     public abstract void drive();
+//     public abstract void fly();
+
+//     public void playMusic(){
+//         System.out.println("Play music");
+//     }
+// }
+// abstract class G_Wagon extends Car {
+
+//     public void drive(){
+//         System.out.println("Driving...");
+//     }
+
+//     // public void fly(){
+//     //     System.out.println("flying...");
+//     // }
+// }
+
+// class UpdateWagon extends G_Wagon{   // Concrete class
+
+//     @Override
+//     public void fly() {
+//         System.out.println("Flying...");
+//     }
+    
+// }
+
+class A {
+
+    int age; 
+
     public void show(){
-        System.out.println("In A Show");
+        System.out.println("In show");
     }
-}
-class B extends A{
-    public void Show1(){
-        System.out.println("In B show");
+    static class B {
+        public void config(){
+            System.out.println("In config");
+        }
     }
 }
 
@@ -57,9 +99,37 @@ public class index {
         Integer num3 = num2; // auto-unboxing -> it's the reverse, converting a wrapper class object  back to its primitive type
 
         String str = "12";
-        int num4 = Integer.parseInt(str);
+        int num4 = Integer.parseInt(str);  // parseInt() - takes a string, takes the digit out and turns it into an int.
+        System.out.println(num4);
 
         System.out.println(num1);
+
+// Abstract Keyword -> used to declare a class or method that is incomplete.
+// A class marked as abstract cannot be instantiated and may contain abstract methods(methods without a body).
+// A method marked abstract has no body and must be overriden in a sublass 
+// we cannot create a obj of an abstract class
+
+        // Car obj = new UpdateWagon();
+        // obj.drive();
+        // obj.playMusic();
+        // obj.fly();
+
+
+// Inner class // - a class within a class, declared inside another class
+
+        A obj = new A();
+        obj.show();  
+        
+        // to execute a method of inner class, first you need to point to the inner class with the main class, 
+        // A.B obj1 = obj.new B();   // if you want to access anything in a class you need an object, same for the inner class, you need an object
+//                                   so if you want to create an object of b, you need an object of a, because that is a non static method
+
+        A.B obj2 = new A.B(); // if the inner class is static
+
+
+        obj2.config();
+
+        
 
 
     }
