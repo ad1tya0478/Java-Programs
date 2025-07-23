@@ -37,19 +37,31 @@
     
 // }
 
+
+// Inner class
+// class A {
+
+//     int age; 
+
+//     public void show(){
+//         System.out.println("In show");
+//     }
+//     static class B {
+//         public void config(){
+//             System.out.println("In config");
+//         }
+//     }
+// }
+
+
+
+// Anonymus inner class
 class A {
-
-    int age; 
-
     public void show(){
-        System.out.println("In show");
+        System.out.println("In a show");
     }
-    static class B {
-        public void config(){
-            System.out.println("In config");
-        }
-    }
-}
+} 
+
 
 public class index {
     public static void main(String[] args) {
@@ -92,17 +104,17 @@ public class index {
 // char - Character
 // double - Double
 
-        int num = 7;
-        Integer num1 = 8;
-        Integer num2 = num;  // Auto-boxing -> it's the automatic conversion of a primitive data type into its corresponding wrapper class object
+        // int num = 7;
+        // Integer num1 = 8;
+        // Integer num2 = num;  // Auto-boxing -> it's the automatic conversion of a primitive data type into its corresponding wrapper class object
 
-        Integer num3 = num2; // auto-unboxing -> it's the reverse, converting a wrapper class object  back to its primitive type
+        // Integer num3 = num2; // auto-unboxing -> it's the reverse, converting a wrapper class object  back to its primitive type
 
-        String str = "12";
-        int num4 = Integer.parseInt(str);  // parseInt() - takes a string, takes the digit out and turns it into an int.
-        System.out.println(num4);
+        // String str = "12";
+        // int num4 = Integer.parseInt(str);  // parseInt() - takes a string, takes the digit out and turns it into an int.
+        // System.out.println(num4);
 
-        System.out.println(num1);
+        // System.out.println(num1);
 
 // Abstract Keyword -> used to declare a class or method that is incomplete.
 // A class marked as abstract cannot be instantiated and may contain abstract methods(methods without a body).
@@ -117,19 +129,29 @@ public class index {
 
 // Inner class // - a class within a class, declared inside another class
 
-        A obj = new A();
-        obj.show();  
+        // A obj = new A();
+        // obj.show();  
         
         // to execute a method of inner class, first you need to point to the inner class with the main class, 
         // A.B obj1 = obj.new B();   // if you want to access anything in a class you need an object, same for the inner class, you need an object
 //                                   so if you want to create an object of b, you need an object of a, because that is a non static method
 
-        A.B obj2 = new A.B(); // if the inner class is static
+        // A.B obj2 = new A.B(); // if the inner class is static
+        // obj2.config();
 
 
-        obj2.config();
+// Anonymus Inner class //
+// An anonymus inner class in java is a class declared and instantiated in a single expression without a name, used to create a one time object
+// with custom behaviour, usually by extending a class or implementing an interface
 
-        
+// new A() {.... : creates an anonymus inne class that extends class A. Inside the {.....} you override the show() method of class A.
+// obj is a reference type A, but it's pointing to the anonymus subclass object.
+        A obj = new A(){  
+            public void show(){
+                System.out.println("IN new SHOW");
+            }
+        };
+        obj.show();
 
 
     }
