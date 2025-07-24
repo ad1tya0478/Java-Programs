@@ -10,14 +10,14 @@
 // Variable and mathod - always start with small letter 
 // constants - all capital 
 
-class A {
-    public A(){
-        System.out.println("object created");
-    }
-    public void show(){
-        System.out.println("In a show");
-    }
-}
+// class A {
+//     public A(){
+//         System.out.println("object created");
+//     }
+//     public void show(){
+//         System.out.println("In a show");
+//     }
+// }
 public class naming_access {
     public static void main(String []args){
 
