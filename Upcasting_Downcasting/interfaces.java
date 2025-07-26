@@ -26,10 +26,22 @@
 // }
 
 
-
+interface computer {
+    public abstract void code();
+}
+class Laptop implements computer{
+    public void code(){
+        System.out.println("Code, compile, run");
+    }
+}
 class Dev{
-    public void devapp(){
-        System.out.println("coding....");
+    public void devapp(computer lap){
+        lap.code();
+    }
+}
+class Desktop implements computer{
+    public void code(){
+        System.out.println("Code, compile, run: faster");
     }
 }
 
@@ -55,8 +67,12 @@ public class interfaces {
 
 // 2nd 
 
+        computer lap = new Laptop();
+        computer desk = new Desktop();
+
+
         Dev adi = new Dev();
-        adi.devapp();
+        adi.devapp(desk);
 
 
     }
