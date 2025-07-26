@@ -56,15 +56,15 @@
 
 
 // Anonymus inner class
-class A {
-    public void show(){
-        System.out.println("In a show");
-    }
-} 
+// class A {
+//     public void show(){
+//         System.out.println("In a show");
+//     }
+// } 
 
 
-public class index {
-    public static void main(String[] args) {
+// public class index {
+//     public static void main(String[] args) {
         // double d = 4.5;
         
         // int i = (int) d;
@@ -146,13 +146,14 @@ public class index {
 
 // new A() {.... : creates an anonymus inne class that extends class A. Inside the {.....} you override the show() method of class A.
 // obj is a reference type A, but it's pointing to the anonymus subclass object.
-        A obj = new A(){  
-            public void show(){
-                System.out.println("IN new SHOW");
-            }
-        };
-        obj.show();
+
+    //     A obj = new A(){  
+    //         public void show(){
+    //             System.out.println("IN new SHOW");
+    //         }
+    //     };
+    //     obj.show();
 
 
-    }
-}
+    // }
+// }

@@ -18,8 +18,8 @@
 //         System.out.println("In a show");
 //     }
 // }
-public class naming_access {
-    public static void main(String []args){
+// public class naming_access {
+//     public static void main(String []args){
 
         // int marks;
         // marks = 99;
@@ -28,10 +28,10 @@ public class naming_access {
         // obj =  new A();
         // obj.show();
 
-        new A().show();  // Anonymus Object
+//         new A().show();  // Anonymus Object
 
-    }
-}
+//     }
+// }
 
 
 // ACCESS MODIFIERS ///
