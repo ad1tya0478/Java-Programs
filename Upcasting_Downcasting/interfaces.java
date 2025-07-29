@@ -14,7 +14,16 @@
 //     void show();
 //     void config();
 // }
-// class B implements A{
+
+// interface x{
+//         void run();
+// }
+
+// interface Y extends x{
+
+// }
+
+// class B implements A,Y{ 
 // // to inherit an interface we use implements
 
 //     public void show(){
@@ -23,26 +32,36 @@
 //     public void config(){
 //         System.out.println("In config");
 //     }
+//     public void run(){
+
+//     }
 // }
 
 
-interface computer {
-    public abstract void code();
-}
-class Laptop implements computer{
-    public void code(){
-        System.out.println("Code, compile, run");
-    }
-}
-class Dev{
-    public void devapp(computer lap){
-        lap.code();
-    }
-}
-class Desktop implements computer{
-    public void code(){
-        System.out.println("Code, compile, run: faster");
-    }
+// interface computer {
+//     public abstract void code();
+// }
+// class Laptop implements computer{
+//     public void code(){
+//         System.out.println("Code, compile, run");
+//     }
+// }
+// class Dev{
+//     public void devapp(computer lap){
+//         lap.code();
+//     }
+// }
+// class Desktop implements computer{
+//     public void code(){
+//         System.out.println("Code, compile, run: faster");
+//     }
+// }
+
+
+
+
+enum Status{
+        Running, Failed, pending, success;
 }
 
 
@@ -67,12 +86,43 @@ public class interfaces {
 
 // 2nd 
 
-        computer lap = new Laptop();
-        computer desk = new Desktop();
+        // computer lap = new Laptop();
+        // computer desk = new Desktop();
 
 
-        Dev adi = new Dev();
-        adi.devapp(desk);
+        // Dev adi = new Dev();
+        // adi.devapp(desk);
+
+
+// ********************************************* // 
+
+// Enum - An enum lets you define a fixed list of things that won’t change. A special type of class, used to define a collection of contants, you can't instantiate them using new
+
+        // int i = 5;
+        // Status[] ss = Status.values();
+        // System.out.println();
+
+        // System.out.println(ss[0]);
+
+        Status s = Status.Running;
+        // if(s == Status.Running){
+        //         System.out.println("Good Running");
+        // }      
+        // else if(s == Status.Failed){
+        //         System.out.println("Try Again");
+        // } else if(s == Status.pending){
+        //         System.out.println("Please wait");
+        // } else {
+        //         System.out.println("done");
+        // }
+
+        switch(s){
+                case Running -> System.out.println("Good Running");
+                case Failed -> System.out.println("Try Again");
+                case pending -> System.out.println("Please wait");
+                case success -> System.out.println("done");
+        }
+        
 
 
     }
