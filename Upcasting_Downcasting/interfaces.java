@@ -82,10 +82,14 @@ enum Laptop{
 
 }
 
+// @FunctionalInterface
+// interface A{
+//         void show(int i);
+// }
 
-////////////  Annotation 
-class A{
-
+@FunctionalInterface
+interface B{
+        int show(int i, int j);
 }
 
 
@@ -141,12 +145,12 @@ public class interfaces {
         //         System.out.println("done");
         // }
 
-        switch(s){
-                case Running -> System.out.println("Good Running");
-                case Failed -> System.out.println("Try Again");
-                case pending -> System.out.println("Please wait");
-                case success -> System.out.println("done");
-        }
+        // switch(s){
+        //         case Running -> System.out.println("Good Running");
+        //         case Failed -> System.out.println("Try Again");
+        //         case pending -> System.out.println("Please wait");
+        //         case success -> System.out.println("done");
+        // }
         
 
         Laptop lap1 = Laptop.MacBook;
@@ -159,6 +163,30 @@ public class interfaces {
         // Annotations in Java are like metadata tags—they don’t do anything themselves, but they give instructions to the compiler or tools.They’re marked with @.
 
 
+// types of interfaces // 
+// 1). Normal interface 2). Functional/SAM  interface 3). Marker interface.
+
+// normal interface only declares methods NO body.
+// Marker interface Empty. No methods. Used to mark classes.Example: Serializable, Cloneable
+// Functional interface Has only one abstract method. Used in lambda expressions.
+// functional interfaces works with only one mehtod because, lambda expressions don't have names and java wouldn't know which method to call if there were more than one.
+
+// Lambda expression in Java is a short-cut for writing anonymous functions—mainly used with functional interfaces.
+        // A obj = (int i) -> {
+        //                 System.out.println("in show " + i);
+        //         };
+        // obj.show(10);
+        // A obj = i -> {
+        //                 System.out.println("in show " + i);
+        //         };
+        // obj.show(10);
+
+
+
+        B obj = (int i, int j) -> i+j;
+
+        int result = obj.show(10, 10);
+        System.out.println(result);
 
     }
 }
