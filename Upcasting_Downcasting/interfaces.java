@@ -63,6 +63,31 @@
 enum Status{
         Running, Failed, pending, success;
 }
+enum Laptop{
+        MacBook(2000), Victus(1500), LOQ(1400), Omen(1900);
+
+        private int price;
+
+        private Laptop(int price) {
+                this.price = price;
+        }
+
+        public int getPrice() {
+                return price;
+        }
+
+        public void setPrice(int price) {
+                this.price = price;
+        }  
+
+}
+
+
+////////////  Annotation 
+class A{
+
+}
+
 
 
 // instantiate - to create a an instance(object) of a class.
@@ -123,6 +148,16 @@ public class interfaces {
                 case success -> System.out.println("done");
         }
         
+
+        Laptop lap1 = Laptop.MacBook;
+        System.out.println(lap1 + ": " + lap1.getPrice());
+
+        for(Laptop lap : Laptop.values()){
+                System.out.println(lap + " : " + lap.getPrice());
+        }
+//////////////////////  Annotation  ////////////////////
+        // Annotations in Java are like metadata tags—they don’t do anything themselves, but they give instructions to the compiler or tools.They’re marked with @.
+
 
 
     }
