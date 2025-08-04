@@ -1,6 +1,10 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class banking {
+    static List<String> transactionHistory = new ArrayList<>();
 
     static Scanner scanner = new Scanner(System.in);
 
@@ -17,7 +21,8 @@ public class banking {
             System.out.println("1. Show Balance");
             System.out.println("2. Deposit");
             System.out.println("3. Withdraw");
-            System.out.println("4. Exit");
+            System.out.println("4. Show Transaction History");
+            System.out.println("5. Exit");
             System.out.println("--------------------");
     
             System.out.print("Enter Your Choice (1-4): ");
@@ -27,7 +32,8 @@ public class banking {
                 case 1 -> showbalance(balance);
                 case 2 -> balance += deposit();
                 case 3 -> balance -= withdraw(balance);
-                case 4 -> isRunning = false;
+                case 4 -> showHistory();
+                case 5 -> isRunning = false;
                 default -> System.out.println("Invalid choice");
             }
         }
@@ -52,6 +58,7 @@ public class banking {
             System.out.println("Amount can't be negative");
             return 0;
         } else {
+            transactionHistory.add("Deposited: $" + String.format("%.2f", amount));
             return amount;
         }
     }
@@ -70,7 +77,19 @@ public class banking {
             System.out.println("Invalid Input");
             return 0;
         } else {
+            transactionHistory.add("Withdrew: $" + String.format("%.2f", amount));
             return amount;
+        }
+    }
+
+    static void showHistory() {
+        System.out.println("\n Transaction History: ");
+        if(transactionHistory.isEmpty()){
+            System.out.println("No transaction History");
+        } else {
+            for(String entry : transactionHistory){
+                System.out.println(entry);
+            }
         }
     }
 
