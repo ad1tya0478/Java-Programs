@@ -95,8 +95,8 @@ interface B{
 
 
 // instantiate - to create a an instance(object) of a class.
-public class interfaces {
-    public static void main(String[] args) {
+// public class interfaces {
+//     public static void main(String[] args) {
         // A obj = new A(){
         //     public void show(){
         //         System.out.println("In new show");
@@ -133,7 +133,7 @@ public class interfaces {
 
         // System.out.println(ss[0]);
 
-        Status s = Status.Running;
+        // Status s = Status.Running;
         // if(s == Status.Running){
         //         System.out.println("Good Running");
         // }      
@@ -189,25 +189,25 @@ public class interfaces {
         // System.out.println(result);
 
 
-        for (int i=1;i<=5;i++){
-                for( int j=5;j>=i;j--){
-                        System.out.print(j + " ");
-                }
-                System.out.println();
-        }
-        System.out.println();
-        for (int i=1;i<=5;i++){
-                for( int j=1;j<=i;j++){
-                        System.out.print(i + " ");
-                }
-                System.out.println();
-        }
-        System.out.println();
-        for (int i=1;i<=5;i++){
-                for( int j=1;j<=i;j++){
-                        System.out.print(j + " ");
-                }
-                System.out.println();
-        }
+//         for (int i=1;i<=5;i++){
+//                 for( int j=5;j>=i;j--){
+//                         System.out.print(j + " ");
+//                 }
+//                 System.out.println();
+//         }
+//         System.out.println();
+//         for (int i=1;i<=5;i++){
+//                 for( int j=1;j<=i;j++){
+//                         System.out.print(i + " ");
+//                 }
+//                 System.out.println();
+//         }
+//         System.out.println();
+//         for (int i=1;i<=5;i++){
+//                 for( int j=1;j<=i;j++){
+//                         System.out.print(j + " ");
+//                 }
+//                 System.out.println();
+//         }
 
-    }
+//     }
