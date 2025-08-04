@@ -153,12 +153,12 @@ public class interfaces {
         // }
         
 
-        Laptop lap1 = Laptop.MacBook;
-        System.out.println(lap1 + ": " + lap1.getPrice());
+        // Laptop lap1 = Laptop.MacBook;
+        // System.out.println(lap1 + ": " + lap1.getPrice());
 
-        for(Laptop lap : Laptop.values()){
-                System.out.println(lap + " : " + lap.getPrice());
-        }
+        // for(Laptop lap : Laptop.values()){
+        //         System.out.println(lap + " : " + lap.getPrice());
+        // }
 //////////////////////  Annotation  ////////////////////
         // Annotations in Java are like metadata tags—they don’t do anything themselves, but they give instructions to the compiler or tools.They’re marked with @.
 
@@ -183,10 +183,31 @@ public class interfaces {
 
 
 
-        B obj = (int i, int j) -> i+j;
+        // B obj = (int i, int j) -> i+j;
 
-        int result = obj.show(10, 10);
-        System.out.println(result);
+        // int result = obj.show(10, 10);
+        // System.out.println(result);
+
+
+        for (int i=1;i<=5;i++){
+                for( int j=5;j>=i;j--){
+                        System.out.print(j + " ");
+                }
+                System.out.println();
+        }
+        System.out.println();
+        for (int i=1;i<=5;i++){
+                for( int j=1;j<=i;j++){
+                        System.out.print(i + " ");
+                }
+                System.out.println();
+        }
+        System.out.println();
+        for (int i=1;i<=5;i++){
+                for( int j=1;j<=i;j++){
+                        System.out.print(j + " ");
+                }
+                System.out.println();
+        }
 
     }
-}
