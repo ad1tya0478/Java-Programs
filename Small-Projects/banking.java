@@ -8,8 +8,15 @@ public class banking {
 
     static Scanner scanner = new Scanner(System.in);
 
+    static final String USERNAME = "aditya_123";
+    static final String PIN = "2580";
+
     public static void main(String[] args) {
 
+        if(!login()){
+            System.out.println("Too many Falied Attempts. Access denied.");
+            return;
+        }
 
         double balance = 0;
         boolean isRunning = true;
@@ -91,6 +98,26 @@ public class banking {
                 System.out.println(entry);
             }
         }
+    }
+
+    static boolean login(){
+        int attempts = 3;
+        while(attempts>0){
+            System.out.print("Enter Username: ");
+            String inputuser = scanner.next();
+
+            System.out.print("Enter the PIN: ");
+            String inputPin = scanner.next();
+
+            if(inputuser.equals(USERNAME) && inputPin.equals(PIN)){
+                System.out.println("\nLogin Successful.\n"); 
+                return true;
+            } else {
+                attempts--;
+                System.out.println("Invalid Credentials. Attempts left: " + attempts);
+            }
+        }
+        return false;
     }
 
 }
