@@ -54,23 +54,29 @@ public class exceptions {
         // System.out.println("bye");
 
 // Throw - this keyword is used to manually display an error, only one exception can be thrown at a time using throw.
+        // int a = 20;
+        // int b = 0;
+        // try{
+        //     b = 18/a;
+        //     if(b==0){
+        //         throw new MyException("Hmmmmm");
+        //     }
+        // } catch(MyException e){
+        //     b = 18/1;
+        //     System.out.println("That's the default output");
+        // } catch(Exception  e){
+        //     System.out.println("Something went wrong" + e);
+        // }
+        // System.out.println(b);
+        // System.out.println("Bye");
 
-        int a = 20;
-        int b = 0;
+// throws - declares that a method might throw one or more exceptions. It lets the caller the know it must handle or further declare the exception
+
         try{
-            b = 18/a;
-            if(b==0){
-                throw new MyException("Hmmmmm");
-            }
-        } catch(MyException e){
-            b = 18/1;
-            System.out.println("That's the default output");
-        } catch(Exception  e){
-            System.out.println("Something went wrong" + e);
+            Class.forName("Demo");
+        } catch(ClassNotFoundException e){
+            System.out.println("Not able to find the class " + e);
         }
-        System.out.println(b);
-        System.out.println("Bye");
-
 
 
     }    
