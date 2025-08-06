@@ -1,3 +1,9 @@
+class MyException extends Exception{
+    public MyException(String string){
+
+    }
+}
+
 public class exceptions {
     public static void main(String[] args) {
 
@@ -47,8 +53,23 @@ public class exceptions {
 
         // System.out.println("bye");
 
+// Throw - this keyword is used to manually display an error, only one exception can be thrown at a time using throw.
 
-        
+        int a = 20;
+        int b = 0;
+        try{
+            b = 18/a;
+            if(b==0){
+                throw new MyException("Hmmmmm");
+            }
+        } catch(MyException e){
+            b = 18/1;
+            System.out.println("That's the default output");
+        } catch(Exception  e){
+            System.out.println("Something went wrong" + e);
+        }
+        System.out.println(b);
+        System.out.println("Bye");
 
 
 
