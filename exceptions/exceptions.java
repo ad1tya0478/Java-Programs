@@ -72,11 +72,11 @@ public class exceptions {
 
 // throws - declares that a method might throw one or more exceptions. It lets the caller the know it must handle or further declare the exception
 
-        try{
-            Class.forName("Demo");
-        } catch(ClassNotFoundException e){
-            System.out.println("Not able to find the class " + e);
-        }
+        // try{
+        //     Class.forName("Demo");
+        // } catch(ClassNotFoundException e){
+        //     System.out.println("Not able to find the class " + e);
+        // }
 
 
     }    
