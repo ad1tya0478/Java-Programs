@@ -2,7 +2,21 @@ import java.util.Scanner;
 public class index {
 public static void main(String[] args) {
 
+    int[][] a = new int[3][4];
     Scanner sc = new Scanner(System.in);
+    for(int i = 0;i < 3;i++){
+        for(int j = 0;j<4;j++){
+            a[i][j] = sc.nextInt();
+        }
+    }
+    System.out.println("The matrix: ");
+    for(int i = 0;i < 3;i++){
+        for(int j = 0;j<4;j++){
+            System.out.print(a[i][j] + "  ");
+        }
+        System.out.println();
+    }
+
 
     // int num = 1;
     // while(num%2==0){
@@ -77,13 +91,7 @@ public static void main(String[] args) {
 
 
         
-        System.out.println("Enter the elements");
-        int arr[] = new int(5);
-        for(int i = 0;i<=5;i++){
-            System.out.println("Enter the element: ");
-            arr[i] = sc.nextInt();
-        }
-        for(int i = 0;)
+
 
 
     }

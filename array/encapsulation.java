@@ -1,4 +1,5 @@
 // class Human {
+// private - It means the variable, method, or constructor is accessible only inside the same class. No other class, not even subclasses, can touch it directly.
 //     private int age = 11;
 //     private String name = "Aditya";
 
