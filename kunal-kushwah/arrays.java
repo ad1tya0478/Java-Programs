@@ -1,6 +1,8 @@
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
+
 public class arrays {
     public static void main(String[] args) {
     Scanner in = new Scanner(System.in);        
@@ -70,14 +72,82 @@ public class arrays {
         //     {6,7,8,9}
         // };
 
-        int[][] arr = new int[3][2];
+        // int[][] arr = new int[3][3];
+        // // input 
+        // for(int row = 0;row<arr.length;row++){ 
+        //     for(int col = 0;col < arr[row].length;col++){
+        //        arr[row][col] = in.nextInt(); 
+        //     }
+        // }
+        // output 
+        // 1.
+        // for(int row = 0;row<arr.length;row++){ 
+        //     for(int col = 0;col < arr[row].length;col++){
+        //        System.out.print(arr[row][col] + " ");
+        //     }
+        //     System.out.println();
+        // }
+        // // 2. 
+        // for(int row = 0;row<arr.length;row++){ 
+        //     System.out.println(Arrays.toString(arr[row]));
+        // }
+        // // 3. 
+        // for(int[] a : arr){ 
+        //     System.out.println(Arrays.toString(a));
+        // }
+
+
+        // matrix without defined columns
+        // int[][] arr1 = new int[3][];
+        // for(int row = 0;row<arr1.length;row++){ 
+
+        //     int cols = in.nextInt();
+
+        //     arr1[row] = new int[cols]; // allocate innner array
+
+        //     for(int col = 0;col < arr1[row].length;col++){
+        //        arr1[row][col] = in.nextInt(); 
+        //     }
+        // }
+        // for(int[] a : arr1){ 
+        //     System.out.println(Arrays.toString(a));
+        // }
+
+
+// Array list //
+// why we need it - It comes with built-in methods: add(), remove(), contains(), indexOf(), etc. Arrays are fixed-size — once you say new int[5], you’re stuck with 5 slots. ArrayList grows/shrinks automatically — no manual copying into bigger arrays.
+// simply we use arraylist when we don't know how much size of the array we need 
+// now what is arraylist - A resizable array implementation of the List interface (from java.util). Stores elements in a contiguous block of memory internally, but automatically handles resizing for you.
+
+        // Syntax 
+        ArrayList<Integer> list = new ArrayList<>(10);
+
+        // list.add(12);
+        // list.add(13);
+        // list.add(14);
+        // list.add(15);
+        // list.add(16);
+        // list.add(17);
+        
+
+        // System.out.println(list);
+        // System.out.println(list.contains(23));
+
+        // list.set(0, 99);
+        // System.out.println(list);
+
+        // list.remove(2);
+        // System.out.println(list);
+
         // input 
-        for(int row = 0;row<arr.length;row++){ 
-            for(int col = 0;col < arr[row].length;col++){
-               arr[row][col] = in.nextInt(); 
-            }
+        for(int i = 0; i < 5;i++){
+            list.add(in.nextInt());
         }
 
+        // get any item at any index 
+        for(int i = 0; i < 5;i++){
+            System.out.print(list.get(i)); // pass index here, list[index] sysntax will not work here
+        }
 
     }
     // static void change(int[] arr){
