@@ -120,7 +120,7 @@ public class arrays {
 // now what is arraylist - A resizable array implementation of the List interface (from java.util). Stores elements in a contiguous block of memory internally, but automatically handles resizing for you.
 
         // Syntax 
-        ArrayList<Integer> list = new ArrayList<>(10);
+        // ArrayList<Integer> list = new ArrayList<>(10);
 
         // list.add(12);
         // list.add(13);
@@ -140,16 +140,53 @@ public class arrays {
         // System.out.println(list);
 
         // input 
-        for(int i = 0; i < 5;i++){
-            list.add(in.nextInt());
-        }
+        // for(int i = 0; i < 5;i++){
+        //     list.add(in.nextInt());
+        // }
 
         // get any item at any index 
-        for(int i = 0; i < 5;i++){
-            System.out.print(list.get(i)); // pass index here, list[index] sysntax will not work here
-        }
+        // for(int i = 0; i < 5;i++){
+        //     System.out.print(list.get(i)); // pass index here, list[index] sysntax will not work here
+        // }
+
+        // and arraylist for multi-deimensional 
+        // ArrayList<ArrayList<Integer>> list = new ArrayList<>();
+
+        // // initialization 
+        // for (int i = 0; i < 3; i++) {
+        //     list.add(new ArrayList<>());
+        // }
+
+        // // add elements 
+        // for (int i = 0; i < 3; i++) {
+        //     for (int j = 0; j < 3; j++) {
+        //         list.get(i).add(in.nextInt());
+        //     }
+        // }
+
+        // System.out.println(list);
+
+//////////////////////////////////////////////////////
+
+// Q.1
+    //     int[] arr2 = {1,2,3,4,5};
+    //     swap(arr2, 0, 4);
+    //     System.out.println(Arrays.toString(arr2));
+ 
+// Q.2 
+        
+
+
+
 
     }
+
+    // static void swap(int[] arr, int index, int index2){
+    //     int temp = arr[index];
+    //     arr[index] = arr[index2];
+    //     arr[index2] = temp;
+    // }
+
     // static void change(int[] arr){
     //     arr[0] = 99;
     // }
