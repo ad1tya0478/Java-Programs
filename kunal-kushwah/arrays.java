@@ -187,23 +187,25 @@ public class arrays {
         // System.out.println(Arrays.toString(arr));
 
 // Q.4 - sorted array check 
-        int[] arr = {1,4,6,8,9,13};
-        if(isSorted(arr)){
-                System.out.println("Array is sorted in ascending order.");
-        } else {
-                System.out.println("Array in not sorted.");
-        }
+        // int[] arr = {1,4,6,8,9,13};
+        // if(isSorted(arr)){
+        //         System.out.println("Array is sorted in ascending order.");
+        // } else {
+        //         System.out.println("Array in not sorted.");
+        // }
+
+// Q.5 - 
 
     }
 
-    static boolean isSorted(int[] arr){
-        for(int i = 0;i< arr.length - 1;i++){
-                if(arr[i] > arr[i + 1]){
-                        return false;
-                }
-        }
-        return true;
-    }
+//     static boolean isSorted(int[] arr){
+//         for(int i = 0;i< arr.length - 1;i++){
+//                 if(arr[i] > arr[i + 1]){
+//                         return false;
+//                 }
+//         }
+//         return true;
+//     }
 
 
 //     static void swapTwo(int[] arr){

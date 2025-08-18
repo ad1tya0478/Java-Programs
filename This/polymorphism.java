@@ -27,48 +27,48 @@
 
 
 // Object Class equals tostring hashcode in java
-class Laptop {
-    int price;
-    String model;
+// class Laptop {
+//     int price;
+//     String model;
 
-    @Override
-    public String toString() {
-        return "Laptop [price=" + price + ", model=" + model + "]";
-    }
+//     @Override
+//     public String toString() {
+//         return "Laptop [price=" + price + ", model=" + model + "]";
+//     }
 
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + price;
-        result = prime * result + ((model == null) ? 0 : model.hashCode());
-        return result;
-    }
+//     @Override
+//     public int hashCode() {
+//         final int prime = 31;
+//         int result = 1;
+//         result = prime * result + price;
+//         result = prime * result + ((model == null) ? 0 : model.hashCode());
+//         return result;
+//     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        Laptop other = (Laptop) obj;
-        if (price != other.price)
-            return false;
-        if (model == null) {
-            if (other.model != null)
-                return false;
-        } else if (!model.equals(other.model))
-            return false;
-        return true;
-    }
-}
+//     @Override
+//     public boolean equals(Object obj) {
+//         if (this == obj)
+//             return true;
+//         if (obj == null)
+//             return false;
+//         if (getClass() != obj.getClass())
+//             return false;
+//         Laptop other = (Laptop) obj;
+//         if (price != other.price)
+//             return false;
+//         if (model == null) {
+//             if (other.model != null)
+//                 return false;
+//         } else if (!model.equals(other.model))
+//             return false;
+//         return true;
+//     }
+// }
 
 
 
-public class polymorphism {
-    public static void main(String[] args) {
+// public class polymorphism {
+//     public static void main(String[] args) {
         
 //  Polymorphism:-  poly means many and morphism means behaviour, and there are two types - 1). Compile Time 2). Run time Polymorphism
 //                  OverLoading is the part of compile time, and OverRiding is the part of Run time, 
@@ -113,18 +113,18 @@ public class polymorphism {
         // System.out.println(obj);
 
         // if you want proper output, overRide tostring() in laptop class
-        Laptop obj = new Laptop();
-        obj.model = "HP Victus";
-        obj.price = 60000;
+//         Laptop obj = new Laptop();
+//         obj.model = "HP Victus";
+//         obj.price = 60000;
 
 
-        Laptop obj1 = new Laptop();
-        obj1.model = "HP Victus";
-        obj1.price = 60000;
+//         Laptop obj1 = new Laptop();
+//         obj1.model = "HP Victus";
+//         obj1.price = 60000;
 
-        boolean result = obj.equals(obj1);
+//         boolean result = obj.equals(obj1);
 
-        System.out.println(result);
+//         System.out.println(result);
         
-    }
-}
+//     }
+// }

@@ -60,37 +60,37 @@
 
 
 
-enum Status{
-        Running, Failed, pending, success;
-}
-enum Laptop{
-        MacBook(2000), Victus(1500), LOQ(1400), Omen(1900);
+// enum Status{
+//         Running, Failed, pending, success;
+// }
+// enum Laptop{
+//         MacBook(2000), Victus(1500), LOQ(1400), Omen(1900);
 
-        private int price;
+//         private int price;
 
-        private Laptop(int price) {
-                this.price = price;
-        }
+//         private Laptop(int price) {
+//                 this.price = price;
+//         }
 
-        public int getPrice() {
-                return price;
-        }
+//         public int getPrice() {
+//                 return price;
+//         }
 
-        public void setPrice(int price) {
-                this.price = price;
-        }  
+//         public void setPrice(int price) {
+//                 this.price = price;
+//         }  
 
-}
+// }
 
 // @FunctionalInterface
 // interface A{
 //         void show(int i);
 // }
 
-@FunctionalInterface
-interface B{
-        int show(int i, int j);
-}
+// @FunctionalInterface
+// interface B{
+//         int show(int i, int j);
+// }
 
 
 
