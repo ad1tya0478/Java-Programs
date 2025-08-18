@@ -173,12 +173,25 @@ public class arrays {
     //     swap(arr2, 0, 4);
     //     System.out.println(Arrays.toString(arr2));
  
-// Q.2 
+// Q.2 - Reversing an array
         
+        int[] arr = {1,2,3,4,5};
 
 
+    }
 
+    static void reverse(int[] arr){
+        int start = 0;
+        int end = arr.length - 1;
 
+        while(start < end){
+                int temp = arr[start];
+                arr[start] = arr[end];
+                arr[end] = temp;
+
+                start++;
+                end--;
+        }
     }
 
     // static void swap(int[] arr, int index, int index2){
