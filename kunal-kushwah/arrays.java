@@ -175,24 +175,60 @@ public class arrays {
  
 // Q.2 - Reversing an array
         
-        int[] arr = {1,2,3,4,5};
+//         int[] arr = {1,2,3,4,5};
 
+//         reverse(arr);
+//         System.out.println("Reversed Arrays: " + Arrays.toString(arr));
 
-    }
+// Q.3 - swap two values 
+        // int[] arr = {1,2,3,4,5};
 
-    static void reverse(int[] arr){
-        int start = 0;
-        int end = arr.length - 1;
+        // swapTwo(arr);
+        // System.out.println(Arrays.toString(arr));
 
-        while(start < end){
-                int temp = arr[start];
-                arr[start] = arr[end];
-                arr[end] = temp;
-
-                start++;
-                end--;
+// Q.4 - sorted array check 
+        int[] arr = {1,4,6,8,9,13};
+        if(isSorted(arr)){
+                System.out.println("Array is sorted in ascending order.");
+        } else {
+                System.out.println("Array in not sorted.");
         }
+
     }
+
+    static boolean isSorted(int[] arr){
+        for(int i = 0;i< arr.length - 1;i++){
+                if(arr[i] > arr[i + 1]){
+                        return false;
+                }
+        }
+        return true;
+    }
+
+
+//     static void swapTwo(int[] arr){
+//         int num1 = 1;
+//         int num2 = 3;
+
+//         int temp = arr[num1];
+//         arr[num1] = arr[num2];
+//         arr[num2] = temp;
+//     }
+
+//     static void reverse(int[] arr){
+//         int start = 0;
+//         int end = arr.length - 1;
+
+//         while(start < end){
+//                 int temp = arr[start];
+//                 arr[start] = arr[end];
+//                 arr[end] = temp;
+
+//                 start++;
+//                 end--;
+//         }
+//     }
+
 
     // static void swap(int[] arr, int index, int index2){
     //     int temp = arr[index];
