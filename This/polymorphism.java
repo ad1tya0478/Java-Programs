@@ -70,7 +70,8 @@
 // public class polymorphism {
 //     public static void main(String[] args) {
         
-//  Polymorphism:-  poly means many and morphism means behaviour, and there are two types - 1). Compile Time 2). Run time Polymorphism
+//  Polymorphism:-  poly means many and morphism means behaviour, and there are two types - 1). Compile Time 2). Run time Polymorphism,  It’s the ability of an object to take many forms. In Java, it means one method, different behaviors, depending on the object.
+
 //                  OverLoading is the part of compile time, and OverRiding is the part of Run time, 
 //                  an object can take many forms, it allows one interface to be used for a general class of actions.
 // OverLoading - same class, different method signatures or it can be parameters
