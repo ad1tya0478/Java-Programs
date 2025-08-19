@@ -12,9 +12,17 @@ public class searching {
         // System.out.println("Element found at index: " + ans);
 
         // linear search in string
-        String name = "aditya";
-        char target = 'y';
-        System.out.println(linearSearch3(name, target));
+        // String name = "aditya";
+        // char target = 'y';
+        // System.out.println(linearSearch3(name, target));
+    
+
+        // search in range 
+        // int[] arr = {23,13,34,45,76,54,32,21,65,90,9,61};
+        // int target = 54;
+        // System.out.println(linearSearch4(arr, target, 1, 6));
+
+    
     }
 
     // Search the target and return the element 
@@ -55,16 +63,33 @@ public class searching {
     // }
 
     // Searching in String 
-    static boolean linearSearch3(String str, char target){
-        if(str.length() == 0){
-            return false;
-        }
-        for(int i = 0; i < str.length(); i++ ){
-            if(target == str.charAt(i)){
-                return true;
-            }
-        }
-        return false;
-    }
+    // static boolean linearSearch3(String str, char target){
+    //     if(str.length() == 0){
+    //         return false;
+    //     }
+    //     for(int i = 0; i < str.length(); i++ ){
+    //         if(target == str.charAt(i)){
+    //             return true;
+    //         }
+    //     }
+    //     return false;
+    // }
+
+    // Search in range 
+    // static int linearSearch4(int[] arr, int target, int start, int end){
+    //     if(arr.length == 0){
+    //         return -1;
+    //     }
+
+    //     // run a for loop
+    //     for(int i = start; i <= end; i++){
+    //         // cheack for element at every index if it is = target
+    //         if(arr[i] == target){
+    //             return i;
+    //         }
+    //     }
+    //     return -1;
+
+    // }
 
 }
