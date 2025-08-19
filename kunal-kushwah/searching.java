@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class searching {
     public static void main(String[] args) {
         // Linear Search 
@@ -22,6 +24,20 @@ public class searching {
         // int target = 54;
         // System.out.println(linearSearch4(arr, target, 1, 6));
 
+        // Searching minimum number 
+        // int[] arr = {12,343,23,2,31,54,65};
+        // System.out.println("The minimum element is: " + linearSearch5(arr));
+
+        // Search in 2D arrays
+        int[][] arr = {
+            {23,65},
+            {13,53,27,56},
+            {24,78,98},
+            {43,61,70,99,2}
+        };
+        int target = 56;
+        int[] ans = linearSearch6(arr, target);
+        System.out.println(Arrays.toString(ans));
     
     }
 
@@ -59,7 +75,6 @@ public class searching {
     //     }
 
     //     return -1;
-
     // }
 
     // Searching in String 
@@ -89,7 +104,31 @@ public class searching {
     //         }
     //     }
     //     return -1;
-
     // }
+
+    // searching minimum number - assume arr.length != 0
+    // static int linearSearch5(int[] arr){
+    //     int ans = arr[0];
+    //     for (int i = 1; i < arr.length; i++) {
+    //         if(arr[i] < ans){
+    //             ans = arr[i];
+    //         }
+    //     }
+    //     return ans;
+    // }
+
+    // search in 2d arrays - 
+    static int[] linearSearch6(int[][] arr, int target){
+        for (int i = 0; i < arr.length; i++) {
+           for (int j = 0; j < arr[i].length; j++) {
+            if(arr[i][j] == target){
+                return new int[]{i,j};
+            }
+           } 
+        }
+        return new int[]{-1,-1};
+    }
+
+
 
 }
