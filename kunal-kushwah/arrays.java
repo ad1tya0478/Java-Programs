@@ -175,10 +175,10 @@ public class arrays {
  
 // Q.2 - Reversing an array
         
-        int[] arr = {1,2,3,4,5};
+        // int[] arr = {1,2,3,4,5};
 
-        reverse(arr);
-        System.out.println("Reversed Arrays: " + Arrays.toString(arr));
+        // reverse(arr);
+        // System.out.println("Reversed Arrays: " + Arrays.toString(arr));
 
 // Q.3 - swap two values 
         // int[] arr = {1,2,3,4,5};
@@ -194,8 +194,22 @@ public class arrays {
         //         System.out.println("Array in not sorted.");
         // }
 
-// Q.5 - 
+/////////////////////// Leetcode ques /////////////////
 
+//      Q.1 - Concatenation of Array
+        //         class Solution {
+        // public int[] getConcatenation(int[] nums) {
+        //         int n = nums.length;
+        //         int[] ans = new int[2*n];
+        //         for(int i = 0; i < n; i++){
+        //         ans[i] = nums[i];
+        //         ans[i+n] == nums[i];
+        //         }
+        //         return ans;
+        // }
+        // }
+
+        
     }
 
 //     static boolean isSorted(int[] arr){
@@ -217,19 +231,19 @@ public class arrays {
 //         arr[num2] = temp;
 //     }
 
-    static void reverse(int[] arr){
-        int start = 0;
-        int end = arr.length - 1;
+//     static void reverse(int[] arr){
+//         int start = 0;
+//         int end = arr.length - 1;
 
-        while(start < end){
-                int temp = arr[start];
-                arr[start] = arr[end];
-                arr[end] = temp;
+//         while(start < end){
+//                 int temp = arr[start];
+//                 arr[start] = arr[end];
+//                 arr[end] = temp;
 
-                start++;
-                end--;
-        }
-    }
+//                 start++;
+//                 end--;
+//         }
+//     }
 
 
     // static void swap(int[] arr, int index, int index2){
