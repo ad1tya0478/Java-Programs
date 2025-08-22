@@ -209,7 +209,32 @@ public class arrays {
         // }
         // }
 
-        
+//      Q.2 - Shuffle the Array
+        //         class Solution {
+        // public int[] shuffle(int[] nums, int n) {
+        //         int[] arr = new int[2*n];
+        //         int index = 0;
+        //         for(int i = 0; i < n; i++ ){
+        //         arr[index++] = nums[i];
+        //         arr[index++] = nums[i+n];
+        //         }
+        //         return arr;
+        // }
+        // }
+
+//      Q.3 - Build Array from Permutation
+        //         class Solution {
+        // public int[] buildArray(int[] nums) {
+        //         int[] ans = new int[nums.length];
+        //         for(int i = 0; i < nums.length; i++ ){
+        //         ans[i] = nums[nums[i]];
+        //         }
+        //         return ans;
+        // }
+        // }
+
+
+
     }
 
 //     static boolean isSorted(int[] arr){
