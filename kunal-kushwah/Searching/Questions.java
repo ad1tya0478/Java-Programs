@@ -18,6 +18,53 @@ public class Questions {
         int target2 = 7;
         System.out.println(question3(arr2, target2));
 
+// Q.4 - Find position of an element in a sorted array of infinite numbers 
+        int[] arr3 = {2,3,5,6,7,8,10,11,12,15,20,23,30,33,39,45};
+        int target3 = 15;
+        System.out.println(findingAns(arr3, target3));
+
+    }
+
+    static int findingAns(int[] arr3, int target3){
+        // first find the range 
+        // first start with a box of size 2.
+        int left = 0;
+        int right = 1;
+
+        // condition for the target to lie in the range 
+        while(target3 > arr3[right]){
+            int temp = right + 1; // this is my new left
+            // double the box value
+            // right = previous right + sizeofbox+2
+            right = right + (right - left + 1) * 2;
+            left = temp;
+        }
+
+        // make sure right doesn’t go beyond array length
+        if (right >= arr3.length) {
+            right = arr3.length - 1;
+        }
+
+        return questions4(arr3, target3, left, right);
+    }
+
+    static int questions4(int[] arr3, int target3, int left, int right){
+
+        while(left <= right){
+        int mid = left + (right - left) / 2; 
+
+            if(target3 < arr3[mid]){
+                right = mid - 1;
+            } else if(target3 > arr3[mid]){
+                left = mid + 1;
+            } else {
+                // ans found
+                return mid;
+            }
+
+        }
+
+        return -1;
     }
 
     static int[] question3(int[] arr2, int target2){
