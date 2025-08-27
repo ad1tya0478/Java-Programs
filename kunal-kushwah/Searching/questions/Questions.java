@@ -21,11 +21,41 @@ public class Questions {
 // Q.4 - Find position of an element in a sorted array of infinite numbers 
         int[] arr3 = {2,3,5,6,7,8,10,11,12,15,20,23,30,33,39,45};
         int target3 = 15;
-        System.out.println(findingAns(arr3, target3));
+        System.out.println(findingAns4(arr3, target3));
 
+// Q.5 - Peak index in a mountain array
+        int[] arr4 = {1,2,3,5,7,6,3,2};
+        System.out.println(question5(arr4));
+ 
     }
 
-    static int findingAns(int[] arr3, int target3){
+    static int question5(int[] arr4){
+        int left = 0;
+        int right = arr4.length - 1;
+
+        while(left < right){
+        int mid = left + (right - left) / 2; 
+
+            if(arr4[mid] > arr4[mid+1]){
+                // you are in the desc part of the array 
+                // this may be the ans, but look at left
+                // this is why end != mid - 1;
+                right = mid;
+            } else {
+                // you are in the asc part of the array 
+                left = mid + 1; // beacuse we know that mid + 1 element > mid element
+            }
+
+        }
+        // in the end, start == and and pointing to the largest number because of the 2 checks above
+        // left and right are always trying to find max element in the above 2 checks 
+        // hence when they are pointing to just one element, that is the max one because that is what the checks say
+        // more elaboration: at every point of time for left and right, they have the best possible answeer till that time
+        // and if we are saying that only one item is remaining, hence cuz of above line that is the best possible ans
+        return left; // or return and as both are equal 
+    }
+
+    static int findingAns4(int[] arr3, int target3){
         // first find the range 
         // first start with a box of size 2.
         int left = 0;
@@ -72,8 +102,8 @@ public class Questions {
         int[] ans = {-1,-1};
 
         // check for the first occurence of target first 
-        int start = search(arr2, target2, true);
-        int end = search(arr2, target2, false);
+        int start = search3(arr2, target2, true);
+        int end = search3(arr2, target2, false);
         ans[0] = start;
         ans[1] = end;
 
@@ -81,7 +111,7 @@ public class Questions {
     }
 
     // this function just returns the index value of target 
-    static int search(int[] arr2, int target2, boolean findstartindex){
+    static int search3(int[] arr2, int target2, boolean findstartindex){
         int ans = -1;
          int left = 0;
         int right = arr2.length - 1;
