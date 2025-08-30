@@ -2,9 +2,9 @@
 public class ques_7 {
     public static void main(String[] args) {
 
-        int[] arr = {1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1};
+        int[] arr = {4,5,6,7,0,1,2};
         int target = 2;
-        System.out.println(ModifiedBinary(arr, target, 0, arr.length-1));
+        System.out.println(rotationCount(arr));
     }
 
     
@@ -110,5 +110,11 @@ public class ques_7 {
             
             return false;
         }
+    
+    static int rotationCount(int[] arr){
+        int pivot = findPivot(arr);
+        return pivot+1;
+    }
+    
 
 }
