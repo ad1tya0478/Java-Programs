@@ -4,20 +4,20 @@ import java.util.Scanner;
 public class index {
 public static void main(String[] args) {
 
-    int[][] a = new int[3][4];
-    Scanner sc = new Scanner(System.in);
-    for(int i = 0;i < 3;i++){
-        for(int j = 0;j<4;j++){
-            a[i][j] = sc.nextInt();
-        }
-    }
-    System.out.println("The matrix: ");
-    for(int i = 0;i < 3;i++){
-        for(int j = 0;j<4;j++){
-            System.out.print(a[i][j] + "  ");
-        }
-        System.out.println();
-    }
+    // int[][] a = new int[3][4];
+    // Scanner sc = new Scanner(System.in);
+    // for(int i = 0;i < 3;i++){
+    //     for(int j = 0;j<4;j++){
+    //         a[i][j] = sc.nextInt();
+    //     }
+    // }
+    // System.out.println("The matrix: ");
+    // for(int i = 0;i < 3;i++){
+    //     for(int j = 0;j<4;j++){
+    //         System.out.print(a[i][j] + "  ");
+    //     }
+    //     System.out.println();
+    // }
 
 
     // int num = 1;
@@ -94,9 +94,30 @@ public static void main(String[] args) {
 
         
 
+        int val = 2;
+        int[] nums = {3,2,2,3};
+        int k = 0;
+        for(int i = 0;i<nums.length;i++){
+            if(nums[i] != val){
+                nums[k] = nums[i];
+                k++;
+            }
+        }
+
+        System.out.println(closest(2, 4, 7));
 
 
     }
+
+    static int closest(int x, int y, int z){
+        int Intx = Math.abs(x-z);
+       int Inty = Math.abs(y-z);
+       if(Intx < Inty) return 1;
+       if(Intx > Inty) return 2;  
+
+        return 0;
+    }
+
 }
 
 
