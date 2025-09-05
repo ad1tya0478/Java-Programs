@@ -107,6 +107,11 @@ public static void main(String[] args) {
         System.out.println(closest(2, 4, 7));
 
 
+        String a = "thequickbrownfoxjumpsoverthelazydog";
+        System.out.println(sentence(a));
+
+
+
     }
 
     static int closest(int x, int y, int z){
@@ -116,6 +121,13 @@ public static void main(String[] args) {
        if(Intx > Inty) return 2;  
 
         return 0;
+    }
+
+    static boolean sentence(String a){
+        
+        if(a.length() < 26) return false;
+        
+        return true;
     }
 
 }
