@@ -94,41 +94,49 @@ public static void main(String[] args) {
 
         
 
-        int val = 2;
-        int[] nums = {3,2,2,3};
-        int k = 0;
-        for(int i = 0;i<nums.length;i++){
-            if(nums[i] != val){
-                nums[k] = nums[i];
-                k++;
-            }
+        // int val = 2;
+        // int[] nums = {3,2,2,3};
+        // int k = 0;
+        // for(int i = 0;i<nums.length;i++){
+        //     if(nums[i] != val){
+        //         nums[k] = nums[i];
+        //         k++;
+        //     }
+        // }
+
+        // System.out.println(closest(2, 4, 7));
+
+
+        // String a = "thequickbrownfoxjumpsoverthelazydog";
+        // System.out.println(sentence(a));
+
+
+        int[] nums = {2,2,1};
+        int result = 0;
+        for(int i = 0;i < nums.length;i++){
+            result ^= nums[i];
         }
-
-        System.out.println(closest(2, 4, 7));
-
-
-        String a = "thequickbrownfoxjumpsoverthelazydog";
-        System.out.println(sentence(a));
+        System.out.println(result);
 
 
 
     }
 
-    static int closest(int x, int y, int z){
-        int Intx = Math.abs(x-z);
-       int Inty = Math.abs(y-z);
-       if(Intx < Inty) return 1;
-       if(Intx > Inty) return 2;  
+    // static int closest(int x, int y, int z){
+    //     int Intx = Math.abs(x-z);
+    //    int Inty = Math.abs(y-z);
+    //    if(Intx < Inty) return 1;
+    //    if(Intx > Inty) return 2;  
 
-        return 0;
-    }
+    //     return 0;
+    // }
 
-    static boolean sentence(String a){
+    // static boolean sentence(String a){
         
-        if(a.length() < 26) return false;
+    //     if(a.length() < 26) return false;
         
-        return true;
-    }
+    //     return true;
+    // }
 
 }
 
