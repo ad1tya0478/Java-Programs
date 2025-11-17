@@ -11,7 +11,7 @@ abstract class Employee implements Serializable {
     protected String contactNumber;
     protected double baseSalary;
     protected int workingDays;
-    protected static final int TOTAL_WORKING_DAYS = 26;
+    protected static final int TOTAL_WORKING_DAYS = 31;
     
     public Employee(String employeeId, String name, String contactNumber, double baseSalary) {
         this.employeeId = employeeId;
