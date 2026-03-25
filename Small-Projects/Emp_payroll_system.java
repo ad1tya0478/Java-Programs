@@ -11,7 +11,7 @@ abstract class Employee implements Serializable {
     protected String contactNumber;
     protected double baseSalary;
     protected int workingDays;
-    protected static final int TOTAL_WORKING_DAYS = 31;
+    protected static final int TOTAL_WORKING_DAYS = 26;
     
     public Employee(String employeeId, String name, String contactNumber, double baseSalary) {
         this.employeeId = employeeId;
@@ -61,14 +61,12 @@ class Manager extends Employee {
         this.allowance = 3000;
     }
     
-    @Override
     public double calculateSalary() {
         double attendanceRatio = (double) workingDays / TOTAL_WORKING_DAYS;
         double salary = (baseSalary * attendanceRatio) + performanceBonus + allowance;
         return salary;
     }
     
-    @Override
     public String getRole() {
         return "Manager";
     }
@@ -85,14 +83,12 @@ class Clerk extends Employee {
         this.overtimeHours = 0;
     }
     
-    @Override
     public double calculateSalary() {
         double attendanceRatio = (double) workingDays / TOTAL_WORKING_DAYS;
         double salary = (baseSalary * attendanceRatio) + (overtimeHours * OVERTIME_RATE);
         return salary;
     }
     
-    @Override
     public String getRole() {
         return "Clerk";
     }
